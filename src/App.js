@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import logo from './logo.svg';
 import './App.css';
-import Info from './components/Info';
-
+import User from './components/User'
+import Account from './components/Account'
+import Blog from './components/Blog'
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/" component{} />
+        <div>
+          <Route exact path="/" component={User} />
+          <Route path="/account" component={Account} />
+          <Route path="/blog" component={Blog} />
+        </div>        
       </Router>
     );
   }
